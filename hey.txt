@@ -1,0 +1,3 @@
+# Nmap 4.11 scan initiated Fri Apr  5 16:15:44 2013 as: nmap -p 3306-3320 -sU -sV -oG hey.txt 10.20.70.26 
+Host: 10.20.70.26 (dbadmin1)	Ports: 3306/closed/udp/////, 3307/closed/udp/////, 3308/closed/udp/////, 3309/closed/udp/////, 3310/closed/udp/////, 3311/closed/udp/////, 3312/closed/udp/////, 3313/closed/udp/////, 3314/closed/udp/////, 3315/closed/udp/////, 3316/closed/udp/////, 3317/closed/udp/////, 3318/closed/udp/////, 3319/closed/udp/////, 3320/closed/udp/////
+# Nmap run completed at Fri Apr  5 16:15:44 2013 -- 1 IP address (1 host up) scanned in 0.101 seconds

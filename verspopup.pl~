@@ -1,0 +1,37 @@
+#!/usr/bin/perl --
+print "Content-type: text/html\n\n";
+
+
+
+use Switch;
+use DBI;
+#use DBIx::Timeout;
+use Socket qw(AF_INET);
+
+require "lib.pl";
+
+
+
+
+    db_connect();
+
+    $query =
+"SELECT swversion,reldate,notes from sc_appinfo order by reldate desc";
+
+    $sth = $dbh->prepare($query);
+    $sth->execute() or die($DBI::errstr);
+    $sth->bind_columns(
+        undef,     \$swversion,    \$reldate, \$notes
+    );
+
+print "<body marginheight=0 marginleft=0 marginright=0><table cellspacing=0 cellpadding=0 width=100%><tr bgcolor=gray><td colspan=3><font face=arial font size=+1 color=white><b>Version History</font></td></tr>
+<tr bgcolor=silver><td><font face=arial size=-1><b>Version</b></td><td><font face=arial size=-1><b>Release date</b></td><td><font face=arial size=-1><b>Notes</b></td></tr>";
+
+    while ( $sth->fetch() ) {
+    print "<tr><td align=left valign=top><font face=arial size=-1>$swversion</td><td align=left valign=top><font face=arial size=-1>$reldate</td><td align=justify valign=top><font face=arial size=-1>$notes</td></tr>";
+
+}
+
+
+print "</table>";
+

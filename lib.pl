@@ -1,0 +1,195 @@
+#!/usr/bin/perl --
+# presupposes the inclusion of: use DBI;
+
+
+# CONSTANTS
+$userid = "dba";
+$passwd = "N0#20uch!T";
+$now    = `date`;
+
+# COLORS
+$nicolor="#EBF5FF";
+
+$nibg         = "bgcolor=palegreen";
+$offlinecolor = "bgcolor=lightcoral";
+$behindcolor  = "bgcolor=yellow";
+$deadcolor    = "bgcolor=powderblue";
+$catchcolor   = "bgcolor=linen";
+$nodaemon     = "bgcolor=turquoise";
+
+
+$userid="dba";
+$passwd="N0#20uch!T";
+$db="admin_info";
+$host="localhost";
+$port="3306";
+
+sub db_connect {
+
+# database information
+$connectionInfo="DBI:mysql:database=$db;$host:$port;mysql_connect_timeout=2";
+#print "[C: $connectionInfo]\n";
+
+# make connection to database
+$dbh = DBI->connect($connectionInfo,$userid,$passwd);
+} # end sub
+
+
+sub db_connect2 {
+
+# database information
+$connectionInfo="DBI:mysql:database=$db;$host:$port;mysql_connect_timeout=2";
+#print "[C: $connectionInfo]\n";
+
+# make connection to database
+$dbh2 = DBI->connect($connectionInfo,$userid,$passwd);
+} # end sub
+
+
+sub db_connect3 {
+
+# database information
+$connectionInfo="DBI:mysql:database=$db;$host:$port;mysql_connect_timeout=2";
+#print "[C: $connectionInfo]\n";
+
+# make connection to database
+$dbh3 = DBI->connect($connectionInfo,$userid,$passwd);
+} # end sub
+
+
+sub db_disconnect {
+
+# disconnect from database
+$dbh->disconnect;
+
+} #end sub
+
+
+sub header {
+
+
+db_connect();
+
+$query ="SELECT COUNT(DISTINCT(ipaddr)) FROM sc_instance;";
+$sth = $dbh->prepare($query);
+$sth->execute();
+$sth->bind_columns( undef, \$totalscanned );
+
+while ( $sth->fetch() ) {
+    }
+$totalmsg = "$totalscanned instances scanned.";
+
+$scancheck=`ps aux | grep scan_subnet.pl | grep -v grep`;
+
+if ("$scancheck" ne "") {
+  $scanmessage="<table align=center cellspacing=0 cellpadding=0 style=\"border: 1px black solid\"><tr><td bgcolor=red><font color=white><b>&nbsp;&nbsp;Subnet scan is currently in progress.  Results may be incomplete.&nbsp;&nbsp;</b></font></td></tr></table>";
+} else {
+  $scanmessage="";
+}
+
+
+
+
+print "Content-type: text/html\n\n";
+
+print "<HEAD>
+
+<script language=\"JavaScript\">
+function toggle1(source) {
+  checkboxes = document.getElementsByName('sn');
+  for(var i=0, n=checkboxes.length;i<n;i++) {
+  checkboxes[i].checked = source.checked;
+  }
+}
+
+function toggle2(source) {
+  checkboxes = document.getElementsByName('sh');
+  for(var i=0, n=checkboxes.length;i<n;i++) {
+  checkboxes[i].checked = source.checked;
+  }
+}
+
+
+
+</script>
+
+<style type=\"text/css\">  /*this is what we want the div to look like    when it is not showing*/  div.loading-invisible{    /*make invisible*/    display:none;  }  /*this is what we want the div to look like    when it IS showing*/  div.loading-visible{    /*make visible*/    display:block;    /*position it 200px down the screen*/    position:absolute;    top:5px;    left:0;    width:100%;    text-align:center;    /*in supporting browsers, make it      a little transparent*/    background:#fff;    filter: alpha(opacity=75); /* internet explorer */    -khtml-opacity: 0.75;      /* khtml, old safari */    -moz-opacity: 0.75;       /* mozilla, netscape */    opacity: 0.75;           /* fx, safari, opera */    border-top:1px solid #fff;    border-bottom:1px solid #fff;  }</style>
+<style type=\"text/css\">
+a.srv:active,a.srv:link,a.srv:visited {color:darkblue; text-decoration: none;}
+a.srv:hover {color:red; text-decoration:underline;}
+</style>
+
+</HEAD>
+
+<BODY>
+<div id=\"loading\" class=\"loading-invisible\">  <p><img src=loading_trans.gif><br><i>(~20 seconds)</i></p></div>
+<script type=\"text/javascript\">  document.getElementById(\"loading\").className = \"loading-visible\";  var hideDiv = function(){document.getElementById(\"loading\").className = \"loading-invisible\";};  var oldLoad = window.onload;  var newLoad = oldLoad ? function(){hideDiv.call(this);oldLoad.call(this);} : hideDiv;  window.onload = newLoad;</script>
+
+
+<TITLE>MySQL Instance Locations: $now</TITLE>\n
+<style type=\"text/css\">
+body { font-family: \"Trebuchet MS\", Arial, Helvetica, sans-serif; font-size: 10;}
+table, th, td
+ {
+  font-size: 13;
+   }
+   
+a:link {color:darkgreen;}      /* unvisited link */
+ a:visited {color:darkgreen;}  /* visited link */
+  a:hover {color:darkblue;}  /* mouse over link */
+   a:active {color:linen;}  /* selected link */    
+   
+   
+</style> 
+";
+
+
+$header = "
+<table width=100%>
+<tr>
+<td>
+<font face=arial size=4><b>MySQL Global Location Audit: $whereami</b></font><br>\n";
+
+$now = `date`;
+
+$searchhr="<table cellpadding=0 cellspacing=0 border=0><form action=index.pl><tr><td>Search string: <input type=string name=str length=15 value=\"$FORM{'str'}\"><input type=submit value=Search></b></td></tr></table></form>";
+
+
+$header .= "<i>$now&nbsp;&nbsp;&nbsp;$totalmsg</i><br>";
+$header .= "$orderhr &nbsp; &nbsp; $vershr &nbsp; &nbsp; $searchhr<br>";
+$header .=
+"</td><td align=right><a href=index.pl>View subnets/servers</a><br><a href=serverdetails.pl>Server details/diffs</a><br>DNS Reconciliation: <a href=dnsaudit.pl>Full</a>&nbsp;&nbsp;<a href=dnsaudit.pl?t=d>Missing</a></td></tr></table>";
+
+$header .= $scanmessage;
+
+#<a href=index.pl?$saved_params&csv=1 target=new>Export as CSV</a></td></tr></table>";
+
+$header .= "<table cellspacing=0 cellpadding=0>";
+
+# <tr><td>LEGEND:&nbsp;&nbsp;</td><td $nibg>No issues</td><td bgcolor=white>&nbsp;&nbsp;</td><td $offlinecolor>Instance offline</td><td bgcolor=white>&nbsp;&nbsp;</td><td $behindcolor>Significantly behind</td><td bgcolor=white>&nbsp;&nbsp;</td><td $catchcolor>Catching up</td><td bgcolor=white>&nbsp;&nbsp;</td><td $deadcolor>Unreachable</td><td bgcolor=white>&nbsp;&nbsp;</td><td $nodaemon>No daemon</td></tr></table>";
+$divider = "<hr size=1 noshade color=silver>\n";
+
+print $header;
+print $divider;
+
+} # end sub header
+
+sub footer() {
+
+db_connect();
+
+$query ="SELECT swversion FROM sc_appinfo ORDER BY id DESC LIMIT 1;;";
+$sth = $dbh->prepare($query);
+$sth->execute();
+$sth->bind_columns( undef, \$swversion );
+
+while ( $sth->fetch() ) { }
+
+print
+"<p><table width=100% bgcolor=silver><tr>
+<td align=left><font size=-2><a href=\"mailto:rbyrd\@riotgames.com?subject=MySQL Audit suggestion\">Email Richard a suggestion for improvement</a></td>
+<td align=right><font size=-2><i><a href=verspopup.pl onclick=\"javascript:void window.open('verspopup.pl','1370544010775','width=600,height=500,toolbar=0,menubar=0,location=0,status=0,scrollbars=0,resizable=1,left=0,top=0');return false;\">Version $swversion</a></i></td></tr></table>";
+} # end sub footer
+
+
+1;

@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+open CNF, ($filename);
+while (<CNF>) {
+    $liner = $_;
+    ( $thiskey, $thisval ) = split( /=/, $liner );
+    chomp $thisval;
+    chomp $thiskey;
+    if ( $thisval eq "" ) {
+        $thisval = "1";
+    }

@@ -1,0 +1,6 @@
+./scan_subnet.pl 10.61.30.0/24
+./scan_subnet.pl 10.100.82.0/24
+./scan_subnet.pl 10.100.130.0/24
+./scan_subnet.pl 10.120.82.0/24
+./scan_subnet.pl 10.120.30.0/24
+

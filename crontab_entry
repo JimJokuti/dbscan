@@ -1,0 +1,9 @@
+# Update slave statuses
+*/15 * * * * cd /var/www/html/dbtools/islaves;perl ./indexdbupdate.pl doit=1 2>&1 > /dev/null
+# Send out daily IS status email
+#15 16 * * * cd /var/www/html/dbtools/islaves;perl ./is_send_islave_mail.pl 2>&1 > /dev/null
+# location audit
+30 20 * * sun,tue cd /var/www/html/dbtools/dbscan; perl ./scan_all.pl 2>&1 > ./last_scan.out
+#
+# Generate the Partition Manager Report
+0 6 * * mon su - mysql -c /var/www/html/dbtools/auditscan/mysql_audit_report.ksh 2>&1 > /dev/null

@@ -1,0 +1,3 @@
+# Nmap 4.11 scan initiated Fri Apr  5 16:44:26 2013 as: nmap -p 3306-3320 -e eth1 -sV -oG tellme.txt 10.20.70.142 
+Host: 10.20.70.142 ()	Ports: 3306/open/tcp//mysql?///, 3307/closed/tcp/////, 3308/closed/tcp/////, 3309/closed/tcp/////, 3310/closed/tcp/////, 3311/closed/tcp/////, 3312/closed/tcp/////, 3313/closed/tcp/////, 3314/closed/tcp/////, 3315/closed/tcp/////, 3316/closed/tcp/////, 3317/closed/tcp/////, 3318/closed/tcp/////, 3319/closed/tcp/////, 3320/closed/tcp/////
+# Nmap run completed at Fri Apr  5 16:44:37 2013 -- 1 IP address (1 host up) scanned in 11.262 seconds

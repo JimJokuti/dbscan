@@ -1,0 +1,1 @@
+  $searchhr="<table cellpadding=0 cellspacing=0 border=0><form action=index.pl><tr><td>Search string: <input type=string name=str length=15 value=\"$FORM{'str'}\"><input type=submit value=Search></b></td></tr></table></form>";

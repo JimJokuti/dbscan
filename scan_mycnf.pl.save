@@ -1,0 +1,56 @@
+#!/usr/bin/perl --
+
+use DBI;
+use DBIx::Timeout;
+use Socket qw(AF_INET);
+require "lib.pl";
+use Socket;
+
+db_connect();
+
+$thisip = $ARGV[0];
+
+if ( "$thisip" eq "" ) {
+    print
+"USAGE:\n\nscan_mycnf.pl [IP or resolvable hostname]\n\n";
+    exit;
+}
+
+# grab the cnfs for running instances on this machine
+
+$cmd="bash ./grabmycnf.sh " . $thisip;
+system($cmd);
+
+$outfiles=`ls -1 $thisip_*.cnf`;
+@outfiles=split(/\n/,$outfiles);
+
+foreach $filename (@outfiles) {
+
+$filestub=$filename;
+$filestub=~s/.cnf//g;
+
+($thisserver,$thisport) = split(/_/,$filestub);
+
+$query="SELECT id,ipaddr, hostname,portnum FROM sc_instance where ipaddr ='$thisserver' AND portnum='$thisport'";
+$sth = $dbh->prepare($query);
+$sth->execute();
+$sth->bind_columns( undef, \$hid, \$hip, \$hhn, \$hp );
+while ( $sth->fetch() ) {
+}
+# end id grabbing
+
+# get data from file
+
+open CNF, ($filename);
+while (<CNF>) {
+$liner=$_;
+($thiskey,$thisval)=split(/=/,$liner);
+
+    $queryi = "INSERT INTO sc_mycnf (iid,keyname,val) VALUES ($hid,$thiskey,$thisval) ON DUPLICATe KEY UPDATE val='$thisval'";
+            $sth = $dbh->prepare($queryii);
+            $sth->execute();
+
+        }
+
+    }
+

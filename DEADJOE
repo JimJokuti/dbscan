@@ -1,0 +1,638 @@
+
+*** These modified files were found in JOE when it aborted on Mon Apr  8 19:35:34 2013
+*** JOE was aborted by UNIX signal 15
+
+*** File '(Unnamed)'
+19
+46
+12
+
+*** File '(Unnamed)'
+3
+</td><td bgcolor=white>&nbsp;&nbsp;</td>
+,
+,
+thishostname
+this_mysqlport
+thismysql
+-
+"
+"
+$thissubnet
+
+*** File '(Unnamed)'
+fratrib
+trib
+fra
+INSERT
++
+10.20.70.142
+\\"
+3306
+NOT_IN
+print
+10.80.30
+
+*** File '(Unnamed)'
+getsizing.sh
+convertip.pl
+ipconv.pl
+tellme.txt
+scanit
+scanit
+scanit
+pscan.pl
+services
+pscan.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+
+*** These modified files were found in JOE when it aborted on Tue Apr  9 15:31:16 2013
+*** JOE was aborted by UNIX signal 15
+
+*** File '(Unnamed)'
+,
+,
+thishostname
+this_mysqlport
+thismysql
+-
+"
+"
+version
+instance
+
+*** File '(Unnamed)'
+INSERT
++
+10.20.70.142
+\\"
+3306
+NOT_IN
+print
+versions
+instances
+substr
+
+*** File '(Unnamed)'
+scanner/scan_subnet.pl
+scanner/scan_subnet.pl
+scanner/scan_subnet.pl
+scanner/scan_subnet.pl
+scanner/scan_subnet.pl
+scanner/scan_subnet.pl
+scanner/scan_subnet.pl
+scanner/scan_subnet.pl
+scanner/scan_subnet.pl
+scanner/scan_subnet.pl
+scan_all.pl
+scan_all.pl
+scan_all.pl
+scan_all.pl
+scan_all.pl
+scan_all.pl
+
+*** These modified files were found in JOE when it aborted on Thu Apr 11 00:19:52 2013
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+185
+179
+198
+
+*** File '(Unnamed)'
+,
+,
+thishostname
+this_mysqlport
+thismysql
+-
+"
+"
+version
+instance
+
+*** File '(Unnamed)'
+\\"
+3306
+NOT_IN
+print
+versions
+instances
+substr
+islave
+now
+form
+darkblue
+print
+shards
+LEG
+
+*** File '(Unnamed)'
+index.pl
+index.pl
+index.pl
+index.pl
+allids
+NA
+EUNE
+EUW
+EUNE
+/root/.ssh/known_hosts
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+
+*** These modified files were found in JOE when it aborted on Sat Apr 13 21:38:50 2013
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+-
+"
+"
+version
+instance
+,
+,
+\",\"
+\\"
+csv
+
+*** File '(Unnamed)'
+xls
+Export
+Show these
+sn
+snets
+pscan
+three
++1
+one
+Sorted
+
+*** File '(Unnamed)'
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+
+*** These modified files were found in JOE when it aborted on Tue May  7 18:57:51 2013
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+mysql -pl1s4t4l0r -
+mysql -pl1s4t4l0r -h
+admin_info2
+rbyrd
+l1s4t4l0r
+dba
+saved_params
+str=$string
+str=$string
+hostname
+
+*** File '(Unnamed)'
+str
+Sorted
+Sorted
+Sorted
+orderhr
+orderhr
+Server-re
+Internal
+Hostname
+auth
+shard
+
+*** File '(Unnamed)'
+index.pl
+index.pl
+s
+lib.pl
+s
+lib.pl
+dnsaudit.pl
+index.pl
+index.pl
+httpd.conf
+index.pl
+index.pl
+
+*** These modified files were found in JOE when it aborted on Wed May 22 22:36:30 2013
+*** JOE was aborted by UNIX signal 15
+
+*** File '(Unnamed)'
+dba
+saved_params
+str=$string
+str=$string
+hostname
+localhost
+${username}
+${password}
+${server}
+sc_mycnf
+
+*** File '(Unnamed)'
+denied
+notes
+rbyrd2
+rbyrd
+l1s4t4l0r
+laxsg1storeslave01
+sc_variable
+rbyrd
+rbyrd
+rbyrd
+
+*** File '(Unnamed)'
+scan_mycnf.pl
+grabmycnf.sh
+autologin.sh
+grabmycnf.sh
+grabmycnf.sh
+autologin.sh
+grabmycnf.sh
+autotest.sh
+auto2.sh
+auto2.sh
+auto2.sh
+auto2.sh
+
+*** These modified files were found in JOE when it aborted on Tue May 28 20:54:31 2013
+*** JOE was aborted because the terminal closed
+
+*** These modified files were found in JOE when it aborted on Tue May 28 20:54:32 2013
+*** JOE was aborted by UNIX signal 1
+
+*** File '(Unnamed)'
+-
+"
+"
+version
+instance
+,
+,
+\",\"
+\\"
+csv
+
+*** File '(Unnamed)'
+one
+Sorted
+Unreac
+isfal
+isfal
+SELECT
+select 
+INSERT
+insert
+SELECT
+10
+sc_subnet
+10
+18
+
+*** File '(Unnamed)'
+index.pl
+indexdbupdate.pl
+common.pl
+index.pl
+index.pl
+indexdbupdate.pl
+common.pl
+scan_subnet.pl
+lib.pl
+dbscan.sql
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+
+*** These modified files were found in JOE when it aborted on Wed May 29 03:54:38 2013
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+,
+,
+thishostname
+this_mysqlport
+thismysql
+-
+"
+"
+version
+instance
+
+*** File '(Unnamed)'
+\\"
+3306
+NOT_IN
+print
+versions
+instances
+substr
+$now
+date
+SELEC
+
+*** File '(Unnamed)'
+scan_single.pl
+scan_single.pl
+scan_single.pl
+scan_single.pl
+scan_subnet.pl
+scan_all.pl
+scan_all.pl
+index.pl
+lib.pl
+index.pl
+lib.pl
+x
+lib.pl
+lib.pl
+
+*** These modified files were found in JOE when it aborted on Wed May 29 03:54:39 2013
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+,
+,
+thishostname
+this_mysqlport
+thismysql
+-
+"
+"
+version
+instance
+
+*** File '(Unnamed)'
+3306
+NOT_IN
+print
+versions
+instances
+substr
+$now
+date
+SELEC
+scanned
+.0
+
+*** File '(Unnamed)'
+scan_single.pl
+scan_single.pl
+scan_single.pl
+scan_subnet.pl
+scan_all.pl
+scan_all.pl
+index.pl
+lib.pl
+index.pl
+lib.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+index.pl
+
+*** These modified files were found in JOE when it aborted on Wed Jun  5 16:33:50 2013
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+,
+,
+thishostname
+this_mysqlport
+thismysql
+-
+"
+"
+version
+instance
+
+*** File '(Unnamed)'
+ON
+variable
+SELECT
+schema
+rapidb
+iid=$id
+allsche
+dbh2
+dbh2
+db_conn
+$allsch
+Subnet
+Subnet
+colspan=6
+search
+
+*** File '(Unnamed)'
+objects/localhost.cfg
+index2.pl
+index2.pliid=$id
+index2.pl
+index2.pl
+index2.pl
+index2.pl
+index2.pl
+lib.pl
+index2.pl
+index2.pl
+index2.pl
+index2.pl
+index2.pl
+index2.pl
+index2.pl
+index2.pl
+index2.pl
+index2.pl
+index2.pl
+index2.pl
+index2.pl
+index2.pl
+index2.pl
+index2.pl
+
+*** These modified files were found in JOE when it aborted on Sat Jun 15 03:16:05 2013
+*** JOE was aborted because the terminal closed
+
+*** These modified files were found in JOE when it aborted on Sat Jun 15 03:16:05 2013
+*** JOE was aborted by UNIX signal 1
+
+*** File '(Unnamed)'
+,
+,
+thishostname
+this_mysqlport
+thismysql
+-
+"
+"
+version
+instance
+
+*** File '(Unnamed)'
+.0
+/24
+24
+/24
+24
+search
+.0
+search
+search
+schema
+
+*** File '(Unnamed)'
+scan_subnet.pl
+index.pl
+index.pl
+lib.pl
+lib.pl
+lib.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+scan_subnet.pl
+lib.pl
+lib.pl
+
+*** These modified files were found in JOE when it aborted on Wed Jul 31 17:26:56 2013
+*** JOE was aborted by UNIX signal 15
+
+*** File '(Unnamed)'
+,
+thishostname
+this_mysqlport
+thismysql
+-
+"
+"
+version
+instance
+ssh 10.
+
+*** File '(Unnamed)'
+:3306
+nagios
+10.
+sc_last
+SELECT
+lc
+sc_variable
+colspan
+$modified
+bash
+
+*** File '(Unnamed)'
+grabos.sh
+scan_mycnf.pl
+scan_mycnf.pl
+scan_mycnf.pl
+scan_mycnf.pl
+scan_mycnf.pl
+grabos.sh
+scan_mycnf.pl
+scan_mycnf.pl
+scan_mycnf.pl
+scan_mycnf.pl
+scan_mycnf.pl
+scan_mycnf.pl
